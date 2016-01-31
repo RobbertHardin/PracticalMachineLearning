@@ -125,7 +125,7 @@ accuracy_RF <- cfMatrix_RF$overall[1]
 cfMatrix_RF
 
 ```
-With only seven predictors Random Forrest runs for about `r floor(difftime(end_RF, start_RF, units = 'mins'))` minutes and has an accuracy of `r round(accuracy_RF, 3)`. This will do the trick. No need for other models or stacking. I might train the model again with a bigger subset, but with this accuracy I should be able to predict `r floor(accuracy_RF * 20)` of the 20 questions :-) 
+With only seven predictors Random Forrest runs for about 11 minutes and has an accuracy of 0.925. This will do the trick. No need for other models or stacking. I might train the model again with a bigger subset, but with this accuracy I should be able to predict 19 of the 20 questions :-) 
 
 I tested it, and I predicted 19 out of 20 correct. If I had more time, I would run it again wiht more predictors. But the deadline is approaching, so I have to balance my options. 
 
@@ -133,7 +133,7 @@ I tested it, and I predicted 19 out of 20 correct. If I had more time, I would r
 By default Random Forrest uses a 10-fold cross validation. Since it did the job, there is no need to change it.
 
 ### Out of Sample Error
-With an accuracy of `r round(accuracy_RF, 3)`, the out of sample error is `r round(1 - accuracy_RF)`.
+With an accuracy of 0.925, the out of sample error is 0.075.
 
 # Prediction 
 Using the Random Forrest model from above, I get the following prediction for the validation data (`validation_data` a.k.a. `testing`):
